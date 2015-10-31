@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) Game *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eventsLabel;
 
 @end
 
@@ -32,7 +34,7 @@
 - (IBAction)cardButtonTapped:(UIButton *)sender {
 	NSUInteger cardIndex = [self.cardButtons indexOfObject:sender];
 	[self.game chooseCardAtIndex:cardIndex];
-	
+    self.scoreLabel.text = [NSString stringWithFormat:@"score: %li", (long)self.game.score];
 	[self updateUI];
 }
 

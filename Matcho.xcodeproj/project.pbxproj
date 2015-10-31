@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C6D99301BDFF05B005F6FC8 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6D992F1BDFF05B005F6FC8 /* Game.m */; settings = {ASSET_TAGS = (); }; };
+		5C6D99301BDFF05B005F6FC8 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6D992F1BDFF05B005F6FC8 /* Game.m */; };
 		5C7386E71BD534CF002CDAF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7386E61BD534CF002CDAF3 /* main.m */; };
 		5C7386EA1BD534CF002CDAF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7386E91BD534CF002CDAF3 /* AppDelegate.m */; };
 		5C7386ED1BD534CF002CDAF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7386EC1BD534CF002CDAF3 /* ViewController.m */; };
 		5C7386F01BD534CF002CDAF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7386EE1BD534CF002CDAF3 /* Main.storyboard */; };
-		5C7386F21BD534CF002CDAF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7386F11BD534CF002CDAF3 /* Assets.xcassets */; };
-		5C7386F51BD534CF002CDAF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7386F31BD534CF002CDAF3 /* LaunchScreen.storyboard */; };
-		5C7387061BD534FD002CDAF3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7386FF1BD534FD002CDAF3 /* Card.m */; settings = {ASSET_TAGS = (); }; };
-		5C7387071BD534FD002CDAF3 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7387011BD534FD002CDAF3 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
-		5C7387081BD534FD002CDAF3 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7387031BD534FD002CDAF3 /* PlayingCard.m */; settings = {ASSET_TAGS = (); }; };
-		5C7387091BD534FD002CDAF3 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7387051BD534FD002CDAF3 /* PlayingCardDeck.m */; settings = {ASSET_TAGS = (); }; };
+		5C7387061BD534FD002CDAF3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7386FF1BD534FD002CDAF3 /* Card.m */; };
+		5C7387071BD534FD002CDAF3 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7387011BD534FD002CDAF3 /* Deck.m */; };
+		5C7387081BD534FD002CDAF3 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7387031BD534FD002CDAF3 /* PlayingCard.m */; };
+		5C7387091BD534FD002CDAF3 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7387051BD534FD002CDAF3 /* PlayingCardDeck.m */; };
+		F3DFB2D31BE511AB008D864E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3DFB2D21BE511AB008D864E /* LaunchScreen.xib */; };
+		F3DFB2D51BE51204008D864E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DFB2D41BE51204008D864E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,6 @@
 		5C7386EB1BD534CF002CDAF3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5C7386EC1BD534CF002CDAF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5C7386EF1BD534CF002CDAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5C7386F11BD534CF002CDAF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5C7386F41BD534CF002CDAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7386F61BD534CF002CDAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C7386FE1BD534FD002CDAF3 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		5C7386FF1BD534FD002CDAF3 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
@@ -41,6 +39,8 @@
 		5C7387031BD534FD002CDAF3 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
 		5C7387041BD534FD002CDAF3 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
 		5C7387051BD534FD002CDAF3 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+		F3DFB2D21BE511AB008D864E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		F3DFB2D41BE51204008D864E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 				5C7386EB1BD534CF002CDAF3 /* ViewController.h */,
 				5C7386EC1BD534CF002CDAF3 /* ViewController.m */,
 				5C7386EE1BD534CF002CDAF3 /* Main.storyboard */,
-				5C7386F11BD534CF002CDAF3 /* Assets.xcassets */,
-				5C7386F31BD534CF002CDAF3 /* LaunchScreen.storyboard */,
+				F3DFB2D21BE511AB008D864E /* LaunchScreen.xib */,
+				F3DFB2D41BE51204008D864E /* Assets.xcassets */,
 				5C7386F61BD534CF002CDAF3 /* Info.plist */,
 				5C7386E51BD534CF002CDAF3 /* Supporting Files */,
 			);
@@ -177,8 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7386F51BD534CF002CDAF3 /* LaunchScreen.storyboard in Resources */,
-				5C7386F21BD534CF002CDAF3 /* Assets.xcassets in Resources */,
+				F3DFB2D31BE511AB008D864E /* LaunchScreen.xib in Resources */,
+				F3DFB2D51BE51204008D864E /* Assets.xcassets in Resources */,
 				5C7386F01BD534CF002CDAF3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,14 +210,6 @@
 				5C7386EF1BD534CF002CDAF3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5C7386F31BD534CF002CDAF3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C7386F41BD534CF002CDAF3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -308,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Matcho/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geekhub.Matcho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -319,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Matcho/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geekhub.Matcho;
 				PRODUCT_NAME = "$(TARGET_NAME)";

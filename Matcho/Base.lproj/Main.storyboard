@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -204,16 +204,31 @@
                                     <action selector="cardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEV-qO-q86"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="baF-E3-6Qg">
+                                <rect key="frame" x="16" y="485" width="292" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="82h-Ra-aNg">
+                                <rect key="frame" x="12" y="444" width="296" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="eventsLabel" destination="baF-E3-6Qg" id="Pr0-tG-9Bf"/>
+                        <outlet property="scoreLabel" destination="82h-Ra-aNg" id="17W-lg-ObM"/>
                         <outletCollection property="cardButtons" destination="h23-sm-ceI" id="cHu-dr-HSe"/>
                         <outletCollection property="cardButtons" destination="yae-pt-bt2" id="9hX-rV-ZnV"/>
                         <outletCollection property="cardButtons" destination="v7f-1t-2WD" id="qGf-nY-3qU"/>
-                        <outletCollection property="cardButtons" destination="h23-sm-ceI" id="Of3-gd-vsX"/>
                         <outletCollection property="cardButtons" destination="Emo-9d-CLG" id="yOw-2o-Ctc"/>
                         <outletCollection property="cardButtons" destination="4aJ-ny-ANg" id="TmL-7C-SzS"/>
                         <outletCollection property="cardButtons" destination="N9A-q0-At3" id="gIV-Dg-4M2"/>
@@ -231,10 +246,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="173.06666666666666" y="335.12"/>
+            <point key="canvasLocation" x="173" y="335"/>
         </scene>
     </scenes>
     <resources>
         <image name="cardback" width="68" height="96"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

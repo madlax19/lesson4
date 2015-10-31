@@ -5,23 +5,9 @@
       "scale" : "1x"
     },
     {
-      "resizing" : {
-        "mode" : "9-part",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1,
-          "height" : 1
-        },
-        "cap-insets" : {
-          "bottom" : 39,
-          "top" : 152,
-          "right" : 76,
-          "left" : 60
-        }
-      },
       "idiom" : "universal",
-      "filename" : "cardfront.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "cardfront.png"
     },
     {
       "idiom" : "universal",
