@@ -26,4 +26,12 @@
     return score;
 }
 
+-(NSString*)color{
+    return @"";
+}
+
+- (BOOL)suitColorMatch: (Card *) card{
+    return NO;
+}
+
 @end

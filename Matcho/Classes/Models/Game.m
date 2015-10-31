@@ -49,6 +49,7 @@
 static const int MISMATCH_PENALTY = 2;
 static const int MATCH_BONUS = 4;
 static const int COST_TO_CHOOSE = 1;
+static const int SUIT_COLOR_BONUS = 9;
 
 
 - (void)chooseCardAtIndex:(NSUInteger)index {
@@ -75,6 +76,9 @@ static const int COST_TO_CHOOSE = 1;
 					card.matched = YES;
 					for (Card *otherCard in chosenCards) {
 						otherCard.matched = YES;
+                        if([card suitColorMatch:otherCard]){
+                            self.score += SUIT_COLOR_BONUS;
+                        }
 					}
 				} else {
 					int penalty = MISMATCH_PENALTY;

@@ -14,7 +14,10 @@
 
 @property (nonatomic, getter = isChosen) BOOL chosen;
 @property (nonatomic, getter = isMatched) BOOL matched;
+@property (nonatomic, readonly) NSString *color;
 
 - (int)match:(NSArray *)otherCards;
+
+- (BOOL)suitColorMatch: (Card *) card;
 
 @end

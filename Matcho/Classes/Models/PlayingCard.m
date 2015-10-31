@@ -49,9 +49,24 @@
 	}
 }
 
+-(NSString*) color{
+    if([self.suit isEqualToString:[PlayingCard suits][2]] || [self.suit isEqualToString:[PlayingCard suits][3]]) {
+        return @"red";
+    }
+    return @"black";
+}
+
 
 -(NSString *) contents {
 	return [NSString stringWithFormat:@"%@%@", [PlayingCard ranks][self.rank], self.suit];
+}
+
+- (BOOL)suitColorMatch: (Card *) card{
+    PlayingCard* pc = (PlayingCard *) card;
+    if([self.color isEqualToString:pc.color] && ![self.suit isEqualToString: pc.suit]){
+        return YES;
+    }
+    return NO;
 }
 
 
