@@ -98,6 +98,7 @@ static const int JOKER_BONUS = 15;
                 } else {
                     int matchScore = [card match:chosenCards];
                     if (matchScore) {
+                        int tempScore = self.score;
                         self.score += (matchScore * MATCH_BONUS);
                         
                         card.chosen = YES;
@@ -108,9 +109,12 @@ static const int JOKER_BONUS = 15;
                                 self.score += SUIT_COLOR_BONUS;
                             }
                         }
+                        Card *otherCard = chosenCards.firstObject;
+                        _currentEvent = [NSString stringWithFormat:@"карты %@ и %@ не совпали, вы потеряли %d очков", card.contents, otherCard.contents, self.score - tempScore];
                     } else {
                         int penalty = MISMATCH_PENALTY;
-                        
+                        Card *otherCard = chosenCards.firstObject;
+                         _currentEvent = [NSString stringWithFormat:@"карты %@ и %@ не совпали, вы потеряли %d очков", card.contents, otherCard.contents, MISMATCH_PENALTY];
                         self.score -= penalty;
                         
                         card.chosen = YES;
@@ -121,6 +125,7 @@ static const int JOKER_BONUS = 15;
                 }
 			} else {
 				self.score -= COST_TO_CHOOSE;
+                _currentEvent = [NSString stringWithFormat:@"открыли карту %@, вы потеряли %d очков", card.contents, COST_TO_CHOOSE];
 				card.chosen = YES;
 			}
 		}

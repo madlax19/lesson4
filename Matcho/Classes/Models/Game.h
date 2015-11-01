@@ -21,5 +21,6 @@
 
 @property (nonatomic, readonly) NSInteger score;
 @property (nonatomic, readonly) BOOL allMatchesIsFound;
+@property (nonatomic, readonly) NSString* currentEvent;
 
 @end

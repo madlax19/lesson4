@@ -39,6 +39,10 @@
 	NSUInteger cardIndex = [self.cardButtons indexOfObject:sender];
 	[self.game chooseCardAtIndex:cardIndex];
     self.scoreLabel.text = [NSString stringWithFormat:@"score: %li", (long)self.game.score];
+    self.eventsLabel.text = self.game.currentEvent;
+    if(self.game.allMatchesIsFound){
+      self.eventsLabel.text = @"игра окончена";
+    }
 	[self updateUI];
 }
 
@@ -51,7 +55,7 @@
 		[cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
 		[cardButton setBackgroundImage:[self backgroundImageForCard:card]
 							  forState:UIControlStateNormal];
-        cardButton.enabled = !card.isMatched && ![self.game allMatchesIsFound];
+        cardButton.enabled = !card.isMatched && !self.game.allMatchesIsFound;
 	}
 }
 
