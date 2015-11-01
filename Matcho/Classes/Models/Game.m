@@ -110,7 +110,7 @@ static const int JOKER_BONUS = 15;
                             }
                         }
                         Card *otherCard = chosenCards.firstObject;
-                        _currentEvent = [NSString stringWithFormat:@"карты %@ и %@ не совпали, вы потеряли %d очков", card.contents, otherCard.contents, self.score - tempScore];
+                        _currentEvent = [NSString stringWithFormat:@"карты %@ и %@ совпали, вы получили %d очков", card.contents, otherCard.contents, self.score - tempScore];
                     } else {
                         int penalty = MISMATCH_PENALTY;
                         Card *otherCard = chosenCards.firstObject;
