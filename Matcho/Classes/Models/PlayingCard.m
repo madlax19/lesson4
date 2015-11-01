@@ -70,18 +70,27 @@
 }
 
 
--(int) match:(NSArray *)otherCards {
-	PlayingCard *card = [otherCards firstObject];
-	
-	if ([self.suit isEqualToString:card.suit]) {
-		return 1;
-	}
-	
-	if (self.rank == card.rank) {
-		return 4;
-	}
-	
-	return 0;
+- (int) match:(NSArray *)otherCards {
+    int sum = 0;
+    for(id object in otherCards) {
+        if([object isMemberOfClass:[Card class]]) {
+            Card *card = (Card *) object;
+            if ([self.contents isEqualToString:card.contents]){
+                sum = sum + 10;
+            }
+        } else {
+            PlayingCard *playingCard = (PlayingCard *) object;
+            if ([self.suit isEqualToString:playingCard.suit]) {
+                sum = sum + 1;
+            }
+            
+            if (self.rank == playingCard.rank) {
+                sum = sum + 4;
+            }
+        }
+    }
+    
+    return sum;
 }
 
 

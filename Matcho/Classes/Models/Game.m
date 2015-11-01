@@ -7,6 +7,7 @@
 //
 
 #import "Game.h"
+#import "PlayingCard.h"
 
 @interface Game ()
 
@@ -43,6 +44,25 @@
 - (NSMutableArray *)cards {
 	if (!_cards) _cards = [[NSMutableArray alloc] init];
 	return _cards;
+}
+
+-(BOOL) allMatchesIsFound {
+    NSMutableArray *cards = [[NSMutableArray alloc] init];
+    
+    for (Card *otherCard in self.cards) {
+        if (!otherCard.isMatched) {
+            [cards addObject:otherCard];
+        }
+    }
+    if(cards.count > 0) {
+        PlayingCard *card = cards.firstObject;
+        [cards removeObject:card];
+        int score = [card match: cards];
+        if(score){
+            return NO;
+        }
+    }
+    return YES;
 }
 
 
