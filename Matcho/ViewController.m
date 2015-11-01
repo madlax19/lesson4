@@ -24,8 +24,12 @@
 
 - (Game *)game {
 	if (!_game) {
+        PlayingCardDeck* deck = [[PlayingCardDeck alloc] init];
+        Card *joker = [[Card alloc] init];
+        joker.contents = @"Joker";
+        [deck addCard:joker];
 		_game = [[Game alloc] initWithCardCount:[self.cardButtons count]
-									  usingDeck:[[PlayingCardDeck alloc] init]];
+									  usingDeck:deck];
 	}
 	return _game;
 }

@@ -70,6 +70,7 @@ static const int MISMATCH_PENALTY = 2;
 static const int MATCH_BONUS = 4;
 static const int COST_TO_CHOOSE = 1;
 static const int SUIT_COLOR_BONUS = 9;
+static const int JOKER_BONUS = 15;
 
 
 - (void)chooseCardAtIndex:(NSUInteger)index {
@@ -88,28 +89,36 @@ static const int SUIT_COLOR_BONUS = 9;
 			}
 			
 			if ([chosenCards count]) {
-				int matchScore = [card match:chosenCards];
-				if (matchScore) {
-					self.score += (matchScore * MATCH_BONUS);
-					
-					card.chosen = YES;
-					card.matched = YES;
-					for (Card *otherCard in chosenCards) {
-						otherCard.matched = YES;
-                        if([card suitColorMatch:otherCard]){
-                            self.score += SUIT_COLOR_BONUS;
+                BOOL isJoker = [card.contents isEqualToString:@"Joker"];
+                for (Card *otherCard in chosenCards) {
+                    isJoker = isJoker || [otherCard.contents isEqualToString:@"Joker"];
+                }
+                if(isJoker) {
+                    self.score = self.score + JOKER_BONUS;
+                } else {
+                    int matchScore = [card match:chosenCards];
+                    if (matchScore) {
+                        self.score += (matchScore * MATCH_BONUS);
+                        
+                        card.chosen = YES;
+                        card.matched = YES;
+                        for (Card *otherCard in chosenCards) {
+                            otherCard.matched = YES;
+                            if([card suitColorMatch:otherCard]){
+                                self.score += SUIT_COLOR_BONUS;
+                            }
                         }
-					}
-				} else {
-					int penalty = MISMATCH_PENALTY;
-					
-					self.score -= penalty;
-					
-					card.chosen = YES;
-					for (Card *otherCard in chosenCards) {
-						otherCard.chosen = NO;
-					}
-				}
+                    } else {
+                        int penalty = MISMATCH_PENALTY;
+                        
+                        self.score -= penalty;
+                        
+                        card.chosen = YES;
+                        for (Card *otherCard in chosenCards) {
+                            otherCard.chosen = NO;
+                        }
+                    }
+                }
 			} else {
 				self.score -= COST_TO_CHOOSE;
 				card.chosen = YES;
